@@ -1,0 +1,101 @@
+.servico-item{
+    display: block;
+    width: 100%;
+    padding: 45px 50px 54px 50px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #F4F4F4;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.32);
+    @include transition();
+
+    &.b1{
+        border-radius: 15px 0 0 0;
+    }
+
+    &.b2{
+        border-radius: 0 15px 0 0;
+    }
+
+    &.b3{
+        border-radius: 0 0 0 15px;
+    }
+
+    &.b4{
+        border-radius: 0 0 15px 0;
+    }
+
+    @media screen and (max-width: $bp-MD){
+        padding: 30px 20px;
+        border-radius: 10px !important;
+        margin-bottom: 0;
+    }
+     
+    &__title{
+        font-size: 27px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: $color-primary;
+
+        span{
+            text-transform: capitalize;
+            font-weight: 400;
+            display: block;
+            font-size: 14px;
+            color: $color-secondary;
+        }
+    }
+
+    &__desc{
+        font-size: 13px;
+        line-height: 1.2;
+        color: $color-secondary;
+
+        @media screen and (max-width: $bp-MD){
+            display: none;
+        }
+    }
+
+    &__more{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        bottom: -10px;
+        left: 50%;
+        font-size: 12px !important;
+        padding: 8px 14px !important;
+
+        @media screen and (max-width: $bp-MD){
+            transform: none;
+            left: unset;
+            bottom: unset;
+            position: relative;
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover{
+        background-color: $color-primary;
+        border-color: $color-primary;
+
+        .servico-item__more{
+            background-color: #fff !important;
+            color: $color-primary !important;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.32);
+            border-color: transparent;
+        }
+
+        .servico-item__title{
+            color: #fff;
+
+            span{
+                color: #fff;
+            }
+        }
+
+        .servico-item__desc{
+            color: #fff;
+        }
+    }
+}

@@ -21,7 +21,6 @@
         dragEndSpeed: 700,
         smartSpeed: 1e3,
         startPosition: 0,
-        mouseDrag: false,
         animateOut: 'fadeOut',
         animateIn: 'fadeIn'
     });

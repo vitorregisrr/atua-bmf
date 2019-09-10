@@ -4,9 +4,11 @@
 }
 
 .section-title {
-    font-size: 28px;
+    font-size: 27px;
+    letter-spacing: -.2px;
     position: relative;
     font-weight: 300;
+    margin-bottom: 40px;
     color: $color-secondary;
 
     &:after {
@@ -14,8 +16,8 @@
         position: absolute;
         left: 0;
         top: 120%;
-        width: 115px;
-        height: 2px;
+        width: 90px;
+        height: 1.5px;
         background-color: $color-primary;
     }
 
