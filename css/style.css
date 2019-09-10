@@ -358,10 +358,15 @@ b {
   border-radius: 0 0 15px 0;
 }
 
+@media screen and (max-width: 992px) {
+  .servico-item {
+    border-radius: 10px !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .servico-item {
     padding: 30px 20px;
-    border-radius: 10px !important;
     margin-bottom: 0;
   }
 }

@@ -26,9 +26,13 @@
         border-radius: 0 0 15px 0;
     }
 
+
+    @media screen and (max-width: $bp-LG){
+        border-radius: 10px !important;
+    }
+    
     @media screen and (max-width: $bp-MD){
         padding: 30px 20px;
-        border-radius: 10px !important;
         margin-bottom: 0;
     }
      
