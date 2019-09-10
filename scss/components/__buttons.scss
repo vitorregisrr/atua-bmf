@@ -11,59 +11,39 @@
     }
 }
 
-.btn-flag{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-    @include transition();
-
-    &:hover{
-        @include scale(1.05);
-    }
-
-    @media screen and(max-width: $bp-LG) {
-        width: 20px;
-        height: 20px;
-        margin-top: 6px;
-    }
-    
-    &--pt{
-        background-image: url(../images/flags/pt.png);
-    }
-
-    &--ing{
-        background-image: url(../images/flags/ing.png);
-    }
-}
-
 .btn-primary{
     min-height: 40px;
-    background-color: #f5ebd0 !important;
-    border: 1px solid #b57b30;
-    color: black;
-    font-family: 'Myriad Pro Bold';
+    background-color: $color-primary;
+    border: 1px solid transparent;
+    color: #fff;
     @include transition();
 
     &:hover{
-        background-color: #e4dabe;
-        color: black;
+        background-color: darken($color-primary, 10);
     }
 }
 
-.btn-default{
-    min-height: 40px;
-    background-color: #dbdbdb !important;
-    border: 1px solid #b57b30;
-    color: black;
-    font-family: 'Myriad Pro Bold';
-    @include transition();
+.btn-white{
 
-    &:hover{
-        background-color: #e4dabe;
-        color: black;
+    &--outline{
+        padding: 8px 13px;
+        background-color: transparent;
+        border-radius: 20px;
+        border: 2px solid #fff;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.342);
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+        @include transition();
+
+        span{
+            font-size: 10px;
+        }
+
+        &:hover{
+            color: black;  
+            background-color: #fff;
+        }
     }
 }
