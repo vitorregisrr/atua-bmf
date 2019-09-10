@@ -3,45 +3,53 @@
     width: 100%;
     z-index: 5;
 
-    @media screen and(max-width: $bp-LG) {
-        position: absolute;
-        left: 150vw;
-        top: 70px;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.849);
-        @include transition();
-
-        &.active {
-            left: 0;
-        }
-    }
-
     &__content {
         display: flex;
         justify-content: space-between;
-        padding: 30px 0;
+        padding: 30px 0 24px;
     }
 
     &__area-cliente {
         position: absolute;
         right: 0;
         background-color: $color-primary;
-        border-radius: 0 0 10px 10px;
-        padding: 3px 14px;
+        border-radius: 0 0 15px 15px;
+        padding: 3px 23px 5px 29px;
         font-size: 12px;
-        font-weight: 400;
+        font-weight: 500;
         letter-spacing: 0.4px;
         text-transform: uppercase;
         color: #fff;
         @include transition();
-
         &:hover {
             color: #fff;
             background-color: darken($color-primary, 5);
             box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.104);
             @include scale(1.03);
         }
+        @media screen and (max-width: $bp-MD) {
+            padding: 2px 14px;
+            font-size: 9px;
+            right: 14px;
+        }
     }
+
+    &__brand {
+
+        img {
+            width: 200px;
+
+            @media screen and (max-width: $bp-XL){
+                width: 170px;
+            }
+
+            @media screen and (max-width: $bp-MD) {
+                width: 140px;
+            }
+        }
+
+    }
+
     &__list {
         display: flex;
         justify-content: flex-end;
@@ -49,27 +57,63 @@
         padding: 0;
 
         @media screen and(max-width: $bp-LG) {
+            position: absolute;
+            padding: 34px 30px 10px;
             flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background-color: black;
+            right: 150vw;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            opacity: 0;
+            z-index: 10;
+            @include transition();
+
+            &.active {
+                position: fixed;
+                right: 0;
+                opacity: .97;
+            }
+        }
+
+        &__close {
+            display: none;
+            position: absolute;
+            right: 30px;
+            top: 34px;
+            color: #fff;
+            font-size: 28px;
+
+            @media screen and (max-width: $bp-LG){
+                display: block;
+            }
         }
     }
 
     &__item {
         display: block;
-        padding: 10px 9px;
+        padding: 10px 11px;
         font-size: 16px;
         line-height: 17px;
         font-weight: 400;
         text-align: center;
-        letter-spacing: 0.2px;
+        letter-spacing: 0;
         @include transition();
 
-        @media screen and (min-width: 768px) and (max-width: 992px) {
-            font-size: 14px;
+        @media screen and (max-width: $bp-XL){
+            padding: 10px 9px;
+            font-size: 15px;
         }
 
         a {
             color: $color-secondary;
             @include transition();
+        }
+
+        &:last-child{
+            padding-right: 0;
         }
 
         &.active,
@@ -81,5 +125,36 @@
             }
         }
 
+        @media screen and(max-width: $bp-LG) {
+            font-weight: 300;
+            font-size: 15px;
+            margin-bottom: 5px;
+            
+            a {
+                color: #fff;
+            }
+
+            &.active,
+            &:active,
+            &:hover {
+                a {
+                    letter-spacing: 0.5px;
+                    color: #fff;
+                    text-shadow: 0 0 0.65px #fff, 0 0 0.65px #fff;
+                }
+            }
+        }
+
+    }
+
+    &__toggler {
+        display: none;
+        align-items: center;
+        font-size: 28px;
+        color: $color-primary;
+
+        @media screen and (max-width: $bp-LG){
+            display: flex;
+        }
     }
 }

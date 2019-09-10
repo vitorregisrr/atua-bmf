@@ -2,14 +2,18 @@
     'use strict';
 
     // Home Carousel //
-    const carousel = $(".owl-carousel.cursos-carousel__carousel");
-    carousel.owlCarousel({
-        loop: false,
+    const homeCarousel = $(".owl-carousel.home-carousel");
+    homeCarousel.owlCarousel({
+        autoplay: true,
+        autoPlaySpeed: 5000,
+        autoPlayTimeout: 5000,
+        autoplayHoverPause: true,
+        loop: true,
         margin: 0,
         items: 1,
         center: true,
-        dots: true,
-        nav: true,
+        dots: false,
+        nav: false,
         navText: [
             "<i class='owl-nav chevron-left'>", "<i class='owl-nav chevron-right'>"
         ],
@@ -17,6 +21,7 @@
         dragEndSpeed: 700,
         smartSpeed: 1e3,
         startPosition: 0,
+        mouseDrag: false,
         animateOut: 'fadeOut',
         animateIn: 'fadeIn'
     });

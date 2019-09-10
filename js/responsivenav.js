@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    $('#navToggler').click(function () {
-        $('#main-nav').toggleClass('active');
+    $('.nav-toggler').click(function () {
+        $('#main-nav-menu').toggleClass('active');
     });
 })();

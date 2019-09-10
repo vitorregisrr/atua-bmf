@@ -1,0 +1,52 @@
+.home-carousel {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.018);
+
+    &__item {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 560px;
+        padding: 100px;
+
+        @media screen and (max-width: $bp-MD){
+            padding: 40px 5px;
+            height: 380px;
+        }
+    }
+
+    &__banner {
+        padding: 45px 40px 60px 40px;
+        height: auto;
+        width: 480px;
+        background-color: #1C8C77;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.168);
+
+        @media screen and (max-width: $bp-LG){
+            width: 370px;
+        }
+
+        @media screen and (max-width: $bp-SM){
+            width: 100%;
+            padding: 30px;
+        }
+
+        &__caption {
+            color: #fff;
+            font-size: 40px;
+            line-height: 1.3;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 24px;
+
+            @media screen and (max-width: $bp-LG){
+                font-size: 30px;
+            }
+
+            @media screen and (max-width: $bp-MD){
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

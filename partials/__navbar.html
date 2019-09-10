@@ -1,16 +1,15 @@
-<nav class="main-nav">
+<nav id="main-nav" class="main-nav">
     <div class="container position-relative">
 
-        <a role="button" href="#" class="main-nav__area-cliente">
+        <a role="button" href="#" class="main-nav__area-cliente wow fadeInDown">
             <span class="far fa-user mr-2" aria-hidden="true"></span>Área do cliente
         </a>
 
         <div class="main-nav__content">
-            <div class="main-nav__brand">
-                <img src="../images/brands/bmf.png" alt="Logomarca BMF">
-            </div>
+            <div class="main-nav__brand wow fadeIn">
+                <img src="../images/brands/bmf.png" alt="Logomarca BMF"></div>
 
-            <ul class="main-nav__list">
+            <ul id="main-nav-menu" class="main-nav__list wow fadeIn">
                 <li class="main-nav__item active">
                     <a href="../pages/index.html">Inicial</a>
                 </li>
@@ -35,7 +34,15 @@
                 <li class="main-nav__item">
                     <a href="../pages/fale-conosco.html">Fale Conosco</a>
                 </li>
+
+                <button class="main-nav__list__close btn-transparent nav-toggler">
+                    <i class="fa fa-times" alt="Fechar menu"></i>
+                </button>
             </ul>
+
+            <button class="main-nav__toggler btn-transparent nav-toggler">
+                <i class="fa fa-bars" alt="Expandir menu"></i>
+            </button>
         </div>
     </div>
 </nav>
