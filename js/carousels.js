@@ -18,11 +18,17 @@
             "<i class='owl-nav chevron-left'>", "<i class='owl-nav chevron-right'>"
         ],
         slideBy: "page",
-        dragEndSpeed: 700,
-        smartSpeed: 1e3,
         startPosition: 0,
         animateOut: 'fadeOut',
         animateIn: 'fadeIn'
+    });
+
+    homeCarousel.on('change.owl.carousel', function (event) {
+        var captions = $(this).find('[data-animated="true"]');
+        captions.removeClass('animated fadeInLeft');
+        setTimeout(() => {
+            captions.addClass('animated fadeInLeft');
+        }, 2)
     });
 
     window.dispatchEvent(new Event('resize'));

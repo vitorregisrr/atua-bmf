@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 768px) {
   .section-title {
-    font-size: 20px;
+    font-size: 22px;
   }
   .section-title:after {
     height: 1px;
@@ -1067,6 +1067,7 @@ textarea.form-control {
 }
 
 .home-carousel__item {
+  overflow-x: hidden;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
