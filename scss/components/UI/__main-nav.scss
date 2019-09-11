@@ -196,7 +196,6 @@
             padding: 0;
             border-radius: 0;
             background-color: unset;
-            pointer-events: all;
 
             &:before {
                 content: '';
@@ -214,6 +213,7 @@
                 padding: 20px 0;
                 max-height: 1000px;
                 opacity: 1;
+                pointer-events: all;
             }
         }
 

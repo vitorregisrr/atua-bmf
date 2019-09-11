@@ -923,7 +923,6 @@ button:focus {
     padding: 0;
     border-radius: 0;
     background-color: unset;
-    pointer-events: all;
   }
   .main-nav__dropdown:before {
     content: '';
@@ -940,6 +939,7 @@ button:focus {
     padding: 20px 0;
     max-height: 1000px;
     opacity: 1;
+    pointer-events: all;
   }
 }
 
