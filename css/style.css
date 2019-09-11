@@ -906,6 +906,12 @@ textarea.form-control {
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 11px;
+  }
+}
+
 .btn-primary {
   min-height: 40px;
   background-color: #0A866F;
@@ -1124,6 +1130,100 @@ textarea.form-control {
     font-size: 25px;
     margin-bottom: 20px;
   }
+}
+
+.banner-exames {
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-exames {
+    padding: 0 17px;
+    overflow-x: hidden;
+  }
+}
+
+.banner-exames__img {
+  overflow: hidden;
+  width: 100%;
+  height: 380px;
+}
+
+@media screen and (max-width: 992px) {
+  .banner-exames__img {
+    padding: 0 15px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner-exames__img {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .banner-exames__img {
+    height: 450px;
+  }
+}
+
+.banner-exames__img img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-exames__caption {
+  padding: 40px 10px 50px;
+  background-color: #0A866F;
+}
+
+.banner-exames__caption__content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.banner-exames__icon {
+  display: block;
+  font-size: 60px;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-exames__icon {
+    font-size: 48px;
+  }
+}
+
+.banner-exames__title {
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  font-size: 21px;
+  letter-spacing: 0.5px;
+  max-width: 460px;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-exames__title {
+    font-size: 18px;
+  }
+}
+
+.banner-exames .btn {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.24);
+  border-width: 1.4px;
+}
+
+.banner-exames .btn:hover {
+  text-shadow: none;
 }
 
 body {
