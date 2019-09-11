@@ -515,6 +515,56 @@ button:focus {
   color: #fff;
 }
 
+.banner-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  height: 180px;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-header {
+    height: 140px;
+  }
+}
+
+.banner-header:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #076050;
+  opacity: .7;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-header:before {
+    opacity: .85;
+    background-color: #075b4c;
+  }
+}
+
+.banner-header__title {
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-header__title {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
 .main-header {
   position: relative;
   margin-bottom: 40px;
@@ -1369,6 +1419,7 @@ textarea.form-control {
   align-items: center;
   flex-direction: column;
   margin-right: auto;
+  margin-right: 50px;
 }
 
 .banner-exames__icon {
