@@ -46,7 +46,7 @@
             margin-right: auto;
             
 
-            @media screen and (max-width: $bp-MD){
+            @media screen and (min-width: $bp-XL){
                 margin-right: 50px;
             }
 
