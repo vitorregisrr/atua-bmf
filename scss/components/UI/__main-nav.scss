@@ -21,12 +21,14 @@
         text-transform: uppercase;
         color: #fff;
         @include transition();
+
         &:hover {
             color: #fff;
             background-color: darken($color-primary, 5);
             box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.104);
             @include scale(1.03);
         }
+
         @media screen and (max-width: $bp-MD) {
             padding: 2px 14px;
             font-size: 9px;
@@ -39,7 +41,7 @@
         img {
             width: 200px;
 
-            @media screen and (max-width: $bp-XL){
+            @media screen and (max-width: $bp-XL) {
                 width: 170px;
             }
 
@@ -74,7 +76,7 @@
             &.active {
                 position: fixed;
                 right: 0;
-                opacity: .97;
+                opacity: 0.97;
             }
         }
 
@@ -86,13 +88,14 @@
             color: #fff;
             font-size: 28px;
 
-            @media screen and (max-width: $bp-LG){
+            @media screen and (max-width: $bp-LG) {
                 display: block;
             }
         }
     }
 
     &__item {
+        position: relative;
         display: block;
         padding: 10px 11px;
         font-size: 16px;
@@ -102,8 +105,10 @@
         letter-spacing: 0;
         @include transition();
 
-        @media screen and (max-width: $bp-XL){
+        @media screen and (max-width: $bp-XL) {
             padding: 10px 9px;
+            width: 100%;
+            text-align: left;
             font-size: 15px;
         }
 
@@ -112,7 +117,7 @@
             @include transition();
         }
 
-        &:last-child{
+        &:last-child {
             padding-right: 0;
         }
 
@@ -129,7 +134,7 @@
             font-weight: 300;
             font-size: 15px;
             margin-bottom: 5px;
-            
+
             a {
                 color: #fff;
             }
@@ -145,6 +150,86 @@
             }
         }
 
+        &:hover {
+            .main-nav__dropdown {
+                bottom: 0;
+                opacity: 1;
+                pointer-events: all;
+
+                @media screen and (max-width: $bp-LG) {
+                    max-height: 1000;
+                }
+            }
+        }
+
+    }
+
+    &__dropdown {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        padding: 35px 30px 25px 30px;
+        background-color: $color-primary;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.208);
+        border-radius: 8px;
+        transform: translateX(-50%) translateY(100%);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 8;
+        min-width: 210px;
+        @include transition();
+
+        @media screen and (max-width: $bp-LG) {
+            position: relative;
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            min-width: unset;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%) scale(1.6);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid $color-primary;
+
+            @media screen and (max-width: $bp-LG) {
+                display: none;
+            }
+        }
+
+        li {
+            width: 100%;
+            position: relative;
+            padding-left: 20px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            text-align: left;
+
+            &:after {
+                content: '\f105';
+                font-family: FontAwesome;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            a {
+                color: #fff !important;
+                @include transition();
+
+                &:hover {
+                    text-shadow: 0.5px 0.5px white;
+                }
+            }
+        }
     }
 
     &__toggler {
@@ -153,7 +238,7 @@
         font-size: 28px;
         color: $color-primary;
 
-        @media screen and (max-width: $bp-LG){
+        @media screen and (max-width: $bp-LG) {
             display: flex;
         }
     }
