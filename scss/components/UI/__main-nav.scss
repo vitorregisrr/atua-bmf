@@ -60,11 +60,11 @@
 
         @media screen and(max-width: $bp-LG) {
             position: absolute;
-            padding: 34px 30px 10px;
+            padding: 34px;
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
-            background-color: black;
+            background-color: rgb(22, 22, 22);
             right: 150vw;
             top: 0;
             height: 100vh;
@@ -76,7 +76,7 @@
             &.active {
                 position: fixed;
                 right: 0;
-                opacity: 0.97;
+                opacity: 0.98;
             }
         }
 
@@ -112,7 +112,7 @@
             font-size: 15px;
         }
 
-        a {
+        &>a {
             color: $color-secondary;
             @include transition();
         }
@@ -124,7 +124,7 @@
         &.active,
         &:active,
         &:hover {
-            a {
+            &>a {
                 color: $color-primary;
                 text-shadow: 0 0 0.65px $color-primary, 0 0 0.65px $color-primary;
             }
@@ -150,14 +150,20 @@
             }
         }
 
-        &:hover {
-            .main-nav__dropdown {
-                bottom: 0;
-                opacity: 1;
-                pointer-events: all;
+        &.has-dropdown {
+            &:hover {
+                @media screen and (min-width: $bp-LG) {
+                    .main-nav__dropdown {
+                        bottom: 0;
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+            }
 
-                @media screen and (max-width: $bp-LG) {
-                    max-height: 1000;
+            & > a {
+                @media screen and (min-width: $bp-LG) {
+                    pointer-events: none;
                 }
             }
         }
@@ -168,7 +174,7 @@
         position: absolute;
         left: 50%;
         bottom: 0;
-        padding: 35px 30px 25px 30px;
+        padding: 35px 30px 25px;
         background-color: $color-primary;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.208);
         border-radius: 8px;
@@ -181,10 +187,34 @@
 
         @media screen and (max-width: $bp-LG) {
             position: relative;
+            transform: unset;
+            left: unset;
+            bottom: unset;
             width: 100%;
             max-height: 0;
-            overflow: hidden;
             min-width: unset;
+            padding: 0;
+            border-radius: 0;
+            background-color: unset;
+            pointer-events: all;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 150vw;
+                left: -20vw;
+                top: 2px;
+                height: 96%;
+                background-color: rgb(8, 8, 8);
+                pointer-events: none;
+            }
+
+            &.active {
+                margin-top: 10px;
+                padding: 20px 0;
+                max-height: 1000px;
+                opacity: 1;
+            }
         }
 
         &:after {
@@ -212,6 +242,19 @@
             margin-bottom: 8px;
             text-align: left;
 
+            @media screen and (max-width: $bp-LG) {
+                padding: 8px 5px 8px 0;
+                font-weight: 300;
+                font-size: 13px;
+                margin-bottom: 0;
+                opacity: 0.9;
+
+                a{
+                    display: block;
+                    width: 100%;
+                }
+            }
+
             &:after {
                 content: '\f105';
                 font-family: FontAwesome;
@@ -219,10 +262,14 @@
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
+
+                @media screen and (max-width: $bp-LG) {
+                    display: none;
+                }
             }
 
             a {
-                color: #fff !important;
+                color: inherit;
                 @include transition();
 
                 &:hover {
