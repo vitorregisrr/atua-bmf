@@ -25,3 +25,8 @@ button, a[role="button"]{
 b{
     font-weight: bold;
 }
+
+
+button:focus{
+    outline: none;
+}

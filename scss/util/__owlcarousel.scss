@@ -16,9 +16,14 @@
             }
 
             button {
+                align-items: center;
                 position: absolute;
-                color: $color-primary !important;
-                font-size: 40px !important;
+                color: #fff;
+                font-size: 40px;
+                background-color: $color-primary;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
                 width: 90px;
                 height: 70px;
                 opacity: 0.8;
@@ -91,12 +96,41 @@
         }
     }
 
+    &.nav-md-center {
+        @media screen and (max-width: $bp-MD) {
+            .owl-nav {
+                position: absolute;
+                width: 100%;
+                top: 70%;
+                transform: translateY(-50%);
+                margin: 0;
+
+                button {
+                    position: absolute;
+                    bottom: 0;
+
+                    &.owl-prev {
+                        left: 3%;
+                    }
+
+                    &.owl-next {
+                        right: 3%;
+                    }
+                }
+            }
+            img {
+                margin: auto auto;
+                width: 50%;
+            }
+        }
+
+    }
+
     .item {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
 
     .owl-dots {
         display: flex;
@@ -116,13 +150,42 @@
                 background-color: #b57b30;
             }
 
-            &:focus,
-            &:active {
+            &:active,
+            &:focus {
                 outline: none;
             }
         }
     }
 
+    .owl-nav {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .owl-nav-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 13px;
+        background-color: $color-primary;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        @include transition();
+
+        @media screen and (max-width: $bp-MD){
+            font-size: 10px;
+            height: 27px;
+            width: 27px;
+        }
+
+        &:hover {
+            @include scale(1.04);
+            background-color: darken($color-primary, 5);
+        }
+    }
 
 }
 

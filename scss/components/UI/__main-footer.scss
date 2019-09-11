@@ -1,84 +1,58 @@
-.main-footer {
-    padding: 60px 0 20px;
+.footer {
+    padding: 40px 20px;
     background-color: $color-primary;
     letter-spacing: 1px;
     color: hsl(60, 100%, 98%);
 
-    b {
-        font-size: 17px;
-    }
+    &__info{
+        font-weight: lighter;
+        color: #fff;
+        font-size: 12px;
 
-    &__title {
-        font-family: 'Myriad Pro Semibold', sans-serif;
-        color: $color-secondary;
-        font-size: 22px;
-        font-weight: 500;
-        text-transform: uppercase;
-        margin-bottom: 0;
-        margin-right: 10px;
-    }
+        p{
+            margin-bottom: 2px;
+        }
 
-    &__subtitle {
-        font-size: 17px;
-        margin: 20px 0;
-    }
-    @media screen and (min-width: 768px) {
-        .brand-col {
-            padding: 30px 50px 66px 0;
+        b{
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: $bp-MD){
+            margin-bottom: 20px;
+            font-size: 11px;
         }
     }
 
-    &__brand {
-        position: relative;
+    &__brand{
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         height: 100%;
-        border-right: 1px solid #fff;
-        @media screen and (max-width: 768px) {
-            justify-content: flex-start;
-            border: none;
-        }
 
-        img {
-            width: 70%;
-            @media screen and (max-width: 768px) {
-                width: 150px;
-                margin-bottom: 30px;
+        img{
+            width: 170px;
+        }
+        
+        @media screen and (max-width: $bp-LG){
+            justify-content: center;
+            margin-bottom: 50px;
+
+            img{
+                width: 120px;
             }
         }
     }
 
-    &__data {
-        margin-bottom: 40px;
-        ul {
-            margin-bottom: 30px;
-        }
+    &__copy{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        font-weight: lighter;
+        font-size: 12px;
 
-        &__medias {
-            margin-top: 60px;
-
-            &__item {
-                font-size: 23px;
-                color: #fff;
-                margin: 0 8px;
-                @include transition();
-                &:hover {
-                    color: rgb(236, 235, 235);
-                }
-            }
-        }
-    }
-
-    &__contact {
-
-        &__submit {
-            color: $color-secondary;
-            font-size: 15px;
-            font-family: 'Myriad Pro Bold', sans-serif;
-            text-transform: uppercase;
-            padding: 0;
-            margin-top: 20px;
+        @media screen and (max-width: $bp-LG){
+            justify-content: center;
         }
     }
 }
