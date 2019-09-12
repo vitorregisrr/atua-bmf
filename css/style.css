@@ -1235,8 +1235,12 @@ textarea.form-control {
   }
 }
 
+.btn.btn-sm {
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
 .btn-primary {
-  min-height: 40px;
   background-color: #0A866F;
   border: 1px solid transparent;
   color: #fff;

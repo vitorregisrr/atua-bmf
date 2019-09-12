@@ -9,10 +9,14 @@
     @media screen and (max-width: $bp-MD){
         font-size: 11px;
     }
+
+    &.btn-sm{
+        padding: 8px 12px;
+        font-size: 12px;
+    }
 }
 
 .btn-primary {
-    min-height: 40px;
     background-color: $color-primary;
     border: 1px solid transparent;
     color: #fff;
