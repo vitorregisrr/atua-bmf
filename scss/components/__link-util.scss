@@ -1,0 +1,38 @@
+.link-util {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(243, 243, 243);
+    padding: 45px 50px 35px 50px;
+    color: $color-primary;
+    border-radius: 11px;
+    cursor: pointer;
+    @include transition();
+
+    @media screen and (max-width: $bp-MD){
+        padding: 30px 40px 30px 40px;
+    }
+    
+    &__label{
+        font-weight: bold;
+        color: inherit;
+        margin-bottom: -4px;
+    }
+    
+    &__link{
+        color: inherit;
+    }
+        
+    &__icon{
+        color: inherit;
+        font-size: 32px;
+        margin-bottom: 15px;
+        transform: translateX(4px)
+    }
+
+    &:hover{
+        background-color: $color-primary;
+        color: #fff;
+    }
+}

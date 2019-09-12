@@ -17,8 +17,9 @@
         left: 0;
         top: 120%;
         width: 90px;
-        height: 1.5px;
+        height: 1.4px;
         background-color: $color-primary;
+        opacity: .5;
     }
 
     @media screen and (max-width: 768px) {

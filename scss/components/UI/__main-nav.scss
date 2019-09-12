@@ -59,6 +59,7 @@
         padding: 0;
 
         @media screen and(max-width: $bp-LG) {
+            overflow: scroll;
             position: absolute;
             padding: 34px;
             flex-direction: column;
