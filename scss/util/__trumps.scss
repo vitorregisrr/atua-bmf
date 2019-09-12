@@ -82,3 +82,22 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.text-md{
+    font-size: 18px;
+}
+
+
+.h-200{
+    height: 200px !important;
+}
+
+.h-md-400{
+    @media screen and (min-width: $bp-MD){
+        height: 400px !important;
+    }
+}
+
+.object-cover{
+    object-fit: cover;
+}

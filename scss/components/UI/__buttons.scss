@@ -19,7 +19,8 @@
     @include transition();
 
     &:hover {
-        background-color: darken($color-primary, 10);
+        background-color: darken($color-primary, 7);
+        @include scale(1.01);
     }
 }
 
@@ -63,4 +64,8 @@
         border: none;
         outline: none;
     }
+}
+
+.btn-shadow{
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.287);
 }

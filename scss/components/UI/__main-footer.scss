@@ -4,10 +4,14 @@
     letter-spacing: 1px;
     color: hsl(60, 100%, 98%);
 
+    @media screen and (max-width: $bp-MD){
+        padding: 20px 10px 30px 10px;
+    }
+
     &__info{
         font-weight: lighter;
         color: #fff;
-        font-size: 12px;
+        font-size: 13px;
 
         p{
             margin-bottom: 2px;

@@ -13,8 +13,8 @@
         position: absolute;
         right: 0;
         background-color: $color-primary;
-        border-radius: 0 0 15px 15px;
-        padding: 3px 23px 5px 29px;
+        border-radius: 0 0 12px 12px;
+        padding: 1px 27px 3px 27px;
         font-size: 12px;
         font-weight: 500;
         letter-spacing: 0.4px;
@@ -257,9 +257,10 @@
 
             &:after {
                 content: '\f105';
-                font-family: FontAwesome;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
                 position: absolute;
-                left: 0;
+                left: 5px;
                 top: 50%;
                 transform: translateY(-50%);
 
