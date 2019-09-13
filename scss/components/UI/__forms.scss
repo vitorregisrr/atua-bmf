@@ -35,6 +35,12 @@ textarea.form-control{
     input{
         padding-top: 21px;
         padding-bottom: 10px;
+
+        @media screen and (max-width: $bp-MD){
+            font-size: 14px;
+            padding-top: 19px;
+            padding-bottom: 7px;
+        }
     }
 
     label{
@@ -46,6 +52,10 @@ textarea.form-control{
         font-size: 11px;
         opacity: 0;
         @include transition();
+
+        @media screen and (max-width: $bp-MD){
+            font-size: 10px;
+        }
     }
 
     input:focus ~ label, label.active{

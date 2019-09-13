@@ -32,7 +32,7 @@
 
 @media screen and (max-width: 768px) {
   .section-title {
-    font-size: 22px;
+    font-size: 21px;
   }
   .section-title:after {
     height: 1px;
@@ -1191,6 +1191,14 @@ textarea.form-control {
   padding-bottom: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .form-labeled input {
+    font-size: 14px;
+    padding-top: 19px;
+    padding-bottom: 7px;
+  }
+}
+
 .form-labeled label {
   position: absolute;
   top: 10px;
@@ -1204,6 +1212,12 @@ textarea.form-control {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .form-labeled label {
+    font-size: 10px;
+  }
 }
 
 .form-labeled input:focus ~ label, .form-labeled label.active {
