@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     background-color: rgb(243, 243, 243);
-    padding: 45px 50px 35px 50px;
+    padding: 55px 50px 35px 50px;
     color: $color-primary;
     border-radius: 11px;
     cursor: pointer;
@@ -26,13 +26,13 @@
         
     &__icon{
         color: inherit;
-        font-size: 32px;
+        font-size: 29px;
         margin-bottom: 15px;
         transform: translateX(4px)
     }
 
     &:hover{
-        background-color: $color-primary;
+        background-color: #1C8C77;
         color: #fff;
     }
 }

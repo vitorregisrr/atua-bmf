@@ -45,3 +45,19 @@
         }
     }
 }
+
+.contact-list{
+    padding-left: 30px;
+
+    li{
+        display: flex;
+        align-items: center;
+
+        span{
+            display: inline-block;
+            margin-right: 7px;
+            font-size: 19px;
+            color: #006654;
+        }
+    }
+}

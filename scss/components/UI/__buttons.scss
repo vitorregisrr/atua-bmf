@@ -80,3 +80,22 @@
 .btn-shadow{
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.287);
 }
+
+.btn-link{
+    color: $color-secondary;
+    text-transform: none;
+    font-size: 15px;
+    text-decoration: none !important;
+    white-space: normal;
+    text-align: left;
+    line-height: 1.1;
+    @include transition();
+
+    @media screen and (max-width: $bp-MD){
+        font-size: 13px;
+    }
+
+    &:hover, &[aria-expanded="true"]{
+        color: $color-primary;
+    }
+}

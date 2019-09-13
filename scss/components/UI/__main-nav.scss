@@ -13,8 +13,8 @@
         position: absolute;
         right: 0;
         background-color: $color-primary;
-        border-radius: 0 0 12px 12px;
-        padding: 1px 27px 3px 27px;
+        border-radius: 0 0 11px 11px;
+        padding: 2px 21px 4px 21px;
         font-size: 12px;
         font-weight: 500;
         letter-spacing: 0.4px;
@@ -29,8 +29,12 @@
             @include scale(1.03);
         }
 
+        @media screen and (max-width: $bp-XL){
+            font-size: 11px;
+        }
+
         @media screen and (max-width: $bp-MD) {
-            padding: 2px 14px;
+            padding: 4px 16px;
             font-size: 9px;
             right: 14px;
         }
@@ -110,7 +114,8 @@
             padding: 10px 9px;
             width: 100%;
             text-align: left;
-            font-size: 15px;
+            white-space: nowrap;
+            font-size: 14px;
         }
 
         &>a {
