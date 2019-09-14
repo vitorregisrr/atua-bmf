@@ -1200,7 +1200,7 @@ textarea.form-control {
   }
 }
 
-.form-labeled label {
+.form-labeled .input-name {
   position: absolute;
   top: 10px;
   left: 20px;
@@ -1216,7 +1216,7 @@ textarea.form-control {
 }
 
 @media screen and (max-width: 768px) {
-  .form-labeled label {
+  .form-labeled .input-name {
     font-size: 10px;
   }
 }
@@ -1224,6 +1224,16 @@ textarea.form-control {
 .form-labeled input:focus ~ label, .form-labeled label.active {
   top: 5px;
   opacity: 1;
+}
+
+.form-group label.error {
+  display: block;
+  color: #f05045;
+  opacity: .8;
+  font-size: 13px;
+  font-weight: 400;
+  padding-top: 5px;
+  padding-left: 4px;
 }
 
 button[data-toggle="collapse"] {
